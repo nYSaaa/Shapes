@@ -14,7 +14,7 @@ class shapes:
         self.length= int(input("Enter the length"))
         self.width = int(input("Enter the width"))
         pen.down()
-        for i in range(2):
+        for _ in range(2):
             pen.forward(self.length)
             pen.left(90)
             pen.forward(self.width)
@@ -22,13 +22,13 @@ class shapes:
     
     def square(self):
         self.side = int(input("Enter the side length"))
-        for i in range(4):
+        for _ in range(4):
             pen.forward(self.side)
             pen.left(90)
     
     def circle(self):
         self.radius = int(input("Enter the radius"))
-        pen.circle()
+        pen.circle(self.radius)
 
 obj = shapes() 
 
@@ -42,3 +42,5 @@ elif shape == "3":
     obj.circle()
 else:
     print("Enter a valid option")
+
+paper.mainloop()
